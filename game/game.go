@@ -3,6 +3,7 @@ package game
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
 	"github.com/jdbann/lasagne"
+	"github.com/jdbann/thestacks/component"
 	"github.com/jdbann/thestacks/resource"
 	"github.com/jdbann/thestacks/system"
 	"github.com/mlange-42/arche-model/model"
@@ -18,6 +19,7 @@ func Run() {
 	m.FPS = 60 // Limit frames per second of UI
 
 	// Add systems
+	m.AddSystem(&system.Movement{})
 	m.AddUISystem(&system.Camera{})
 	m.AddUISystem(&system.Render{})
 
@@ -44,6 +46,19 @@ func Run() {
 		Texture:  chairTexture,
 		Size:     rl.NewVector3(12, 12, 12),
 	})
+
+	personBuilder := generic.NewMap3[lasagne.Object, component.Position, component.Velocity](&m.World)
+
+	crateTexture := rl.LoadTexture("assets/Crate_strip8.png")
+	personBuilder.NewWith(
+		&lasagne.Object{
+			Position: rl.NewVector3(0, 0, 1),
+			Texture:  crateTexture,
+			Size:     rl.NewVector3(16, 16, 8),
+		},
+		&component.Position{},
+		&component.Velocity{X: 1},
+	)
 
 	// Run the model
 	m.Run()
