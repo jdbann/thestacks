@@ -1,0 +1,6 @@
+[
+  {
+    "label": "Run The Stacks",
+    "command": "go run ."
+  }
+]
