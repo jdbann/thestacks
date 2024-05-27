@@ -20,6 +20,7 @@ func Run() {
 
 	// Add systems
 	m.AddSystem(&system.Movement{})
+	m.AddSystem(&system.Steer{})
 	m.AddUISystem(&system.Camera{})
 	m.AddUISystem(&system.Render{})
 
@@ -47,7 +48,7 @@ func Run() {
 		Size:     rl.NewVector3(12, 12, 12),
 	})
 
-	personBuilder := generic.NewMap3[lasagne.Object, component.Position, component.Velocity](&m.World)
+	personBuilder := generic.NewMap4[lasagne.Object, component.Position, component.Velocity, component.Goals](&m.World)
 
 	crateTexture := rl.LoadTexture("assets/Crate_strip8.png")
 	personBuilder.NewWith(
@@ -58,6 +59,12 @@ func Run() {
 		},
 		&component.Position{},
 		&component.Velocity{X: 1},
+		&component.Goals{
+			MaxSpeed:             1,
+			Wander:               1,
+			WanderCircleDistance: 4,
+			WanderCircleRadius:   1,
+		},
 	)
 
 	// Run the model
