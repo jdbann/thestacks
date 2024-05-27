@@ -15,9 +15,9 @@ type Camera struct {
 	sceneRes  generic.Resource[lasagne.Scene]
 }
 
-func (c *Camera) Finalize(w *ecs.World) {}
+func (c *Camera) FinalizeUI(w *ecs.World) {}
 
-func (c *Camera) Initialize(w *ecs.World) {
+func (c *Camera) InitializeUI(w *ecs.World) {
 	c.cameraRes = generic.NewResource[lasagne.Camera](w)
 	c.keysRes = generic.NewResource[resource.KeyBindings](w)
 	c.sceneRes = generic.NewResource[lasagne.Scene](w)
@@ -27,7 +27,9 @@ func (c *Camera) Initialize(w *ecs.World) {
 	c.cameraRes.Add(camera)
 }
 
-func (c *Camera) Update(w *ecs.World) {
+func (c *Camera) PostUpdateUI(w *ecs.World) {}
+
+func (c *Camera) UpdateUI(w *ecs.World) {
 	if !c.cameraRes.Has() || !c.keysRes.Has() || !c.sceneRes.Has() {
 		return
 	}
@@ -75,4 +77,4 @@ func (c *Camera) zoom(camera *lasagne.Camera, v float32) {
 	camera.Zoom = rl.Clamp(camera.Zoom+v, 0.5, 8)
 }
 
-var _ model.System = (*Camera)(nil)
+var _ model.UISystem = (*Camera)(nil)

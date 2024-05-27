@@ -15,7 +15,7 @@ func Run() {
 	m.FPS = 60 // Limit frames per second of UI
 
 	// Add systems
-	m.AddSystem(&system.Camera{})
+	m.AddUISystem(&system.Camera{})
 	m.AddUISystem(&system.Render{})
 
 	// Prepare the model and systems
