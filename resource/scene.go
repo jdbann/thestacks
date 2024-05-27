@@ -28,7 +28,6 @@ func DefaultScene() *lasagne.Scene {
 	})
 
 	return lasagne.NewScene(lasagne.SceneParams{
-		Objects: []lasagne.Object{},
 		TileMap: tileMap,
 		TileSet: tileSet,
 	})

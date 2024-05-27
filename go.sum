@@ -4,8 +4,8 @@ github.com/ebitengine/purego v0.7.1 h1:6/55d26lG3o9VCZX8lping+bZcmShseiqlh2bnUDi
 github.com/ebitengine/purego v0.7.1/go.mod h1:ah1In8AOtksoNK6yk5z1HTJeUkC1Ez4Wk2idgGslMwQ=
 github.com/gen2brain/raylib-go/raylib v0.0.0-20240524074310-a997a44fb95b h1:BOAQWmspPqfnNWsPVD2x5BSXR9LGZhdN3litGjVcWIc=
 github.com/gen2brain/raylib-go/raylib v0.0.0-20240524074310-a997a44fb95b/go.mod h1:BaY76bZk7nw1/kVOSQObPY1v1iwVE1KHAGMfvI6oK1Q=
-github.com/jdbann/lasagne v0.0.1 h1:DnF/DfX8QNlNDD2MMlbJhhlOp5DLZPpiaXtLAjIpnQI=
-github.com/jdbann/lasagne v0.0.1/go.mod h1:aN9aZ0tgC4VvMgHNwAojcafqrVYlLx6cLLX9hdezNa4=
+github.com/jdbann/lasagne v0.0.2 h1:7GoKf0r3CCO9D996WxvfofuU04eFQd3u3eVJ47+gURE=
+github.com/jdbann/lasagne v0.0.2/go.mod h1:aN9aZ0tgC4VvMgHNwAojcafqrVYlLx6cLLX9hdezNa4=
 github.com/mlange-42/arche v0.13.0 h1:ef0fu9qC2KIr8wIlVs+CgeQ5CSUJ8A1Hut6nXYdf+xk=
 github.com/mlange-42/arche v0.13.0/go.mod h1:bFktKnvGDj2kP01xar79z0hKwGHdnoaEZR8HWmJkIyU=
 github.com/mlange-42/arche-model v0.9.0 h1:S/qIvZNra782+nPixPkV5Ay9lAO51T1Zy7y4J62p1lo=
