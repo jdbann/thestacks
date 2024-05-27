@@ -2,7 +2,7 @@ package system
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
-	"github.com/jdbann/thestacks/lasagne"
+	"github.com/jdbann/lasagne"
 	"github.com/jdbann/thestacks/resource"
 	"github.com/mlange-42/arche-model/model"
 	"github.com/mlange-42/arche/ecs"

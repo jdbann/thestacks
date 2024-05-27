@@ -2,7 +2,7 @@ package resource
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
-	"github.com/jdbann/thestacks/lasagne"
+	"github.com/jdbann/lasagne"
 )
 
 func DefaultScene() *lasagne.Scene {
